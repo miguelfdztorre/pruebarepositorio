@@ -8,6 +8,10 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+img {
+    width: 350px;
+    margin-bottom: 20px;
+}
 
 .container {
     width: 90%;
