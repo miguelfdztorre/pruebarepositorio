@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+img {
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 375px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: hsl(123, 45%, 53%, 0.3);
+}
+
+.highlight {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.project {
+    border: 1px solid #39b7ec;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.2);
+    box-shadow: 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.project p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.verde h2 { color: #1e88e5; }
+.eco h2 { color: #ffb300; }
+.raiz h2 { color: #43a047; }
+
+/* 🔁 MEDIA QUERIES PARA RESPONSIVIDAD */
+
+/* Tablets en modo retrato y superior (>600px) */
+@media (min-width: 600px) {
+    .container {
+        max-width: 600px;
+    }
+    .project {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .project h2 {
+        font-size: 22px;
+    }
+    .project p {
+        font-size: 15px;
+    }
+}
+
+/* Escritorio (>900px) */
+@media (min-width: 900px) {
+    .container {
+        max-width: 800px;
+    }
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .project {
+        margin-bottom: 0;
+    }
+}
+
+/*efecto javascript*/
+.project {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.project.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* banner*/
+
+  .banner {
+    background: linear-gradient(135deg, #ddfe89 0%, #66a6ff 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: 2rem;
+  }
+
+  .banner h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+
+  .banner p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+/*efecto para el banner*/
+
+  .banner {
+    position: relative;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    overflow: hidden;
+  }
+
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+  }
+
+  .banner:hover {
+    background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+  }
+
+  .banner:hover::before {
+    left: 125%;
+  }
+
