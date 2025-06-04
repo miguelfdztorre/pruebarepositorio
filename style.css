@@ -1,4 +1,5 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
@@ -9,6 +10,10 @@
     font-weight: <weight>;
     font-style: normal;
 } */
+
+button{
+    all:unset;
+}
 body{
     background-color: #F6FFF7;
 }
@@ -19,6 +24,16 @@ body{
 
 }
 
+.main h3 {
+    font-size: 96px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+nav-container{
+    padding: 4%;
+}
+
 nav{
     width: 100%;
     height: 100vh;
@@ -26,9 +41,327 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: none;
+    position: relative;
+    overflow: visible;
+      
+    
+}
+
+.nav-bg {
+    position: relative;
+    width: 90vw;
+    /* або як вам потрібно */
+    max-width: 95%;
+    height: 90vh;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+}
+.video-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+    
 }
 
 nav h3{
     margin: 30px;
     font-size: 64px;
+    
+}
+
+nav button {
+    background-color: #308230;
+    width: 490px;
+    height: 90px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 64px;
+    text-align: center;
+    color: aliceblue;
+    font-size: 28px;
+    margin-top: 150px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: 
+    transform 0.7s ease,
+    background-color 0.7s,
+    box-shadow 0.7s;
+}
+
+nav button:hover{
+    background-color: #2b6c2b;
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.323);
+}
+
+.second-part{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.text-side{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+.text-side h2{
+    background-color: #71AAFF;
+    color:aliceblue;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    font-size: 38px;
+
+}
+.text-side p {
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    border: 3px solid #71AAFF;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    flex: 1;
+    font-size: 32px;
+    line-height: 200%;
+}
+.team-side{
+    padding: 0;
+    width: 30vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+    align-items: space-between;
+    gap: 20px;
+    grid-template-areas:
+        "teamtext teamtext"
+        "teamcard1 teamcard2"
+        "teamcard3 teamcard4"
+        ;
+}
+
+
+.team-side h2 {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: teamtext;
+    background-color: #FFC352;
+    color: aliceblue;
+    border-radius: 25px;
+    text-align: center;
+    padding: 25px;
+    
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+#card1{
+    grid-area: teamcard1;
+    
+}
+#card2 {
+    grid-area: teamcard2;
+    
+}
+#card3 {
+    grid-area: teamcard3;
+}
+
+#card4 {
+    grid-area: teamcard4;
+} 
+.person-item{
+    border: 3px solid #FFC352;
+    border-radius: 25px;
+    width: auto;
+    height: auto;
+    display: grid;
+    padding: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    grid-template-areas:
+        "img img"
+        "name name"
+        "github linkedin"
+        ;
+}
+
+.person-foto{
+    grid-area: img;
+    width: 160px;
+    
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.person-nombre{
+    grid-area: name;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.person-item img,
+.person-nombre,
+.socialmedia-button {
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+.github{
+    grid-area: github;
+}
+.linkedin{
+    grid-area: linkedin;
+}
+.svgicons{
+    width: 50px;
+}
+
+
+.third-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.third-part-maintext{
+    font-size: 38px;
+    margin-top: 180px;
+    margin-bottom: 180px;
+    text-align: center;
+}
+
+.projects{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 20%;
+    
+    border-radius: 25px;
+    text-align: center;
+    padding: 40px;
+    margin-bottom: 150px;
+}
+
+.project-card h1{
+    font-size: 48px;
+    padding: 40px;
+}
+
+.project-card p {
+    font-size: 24px;
+
+}
+
+#card-blue{
+    border: 3px solid #0066FF;
+    background-color: rgb(240, 248, 255);
+}
+#card-blue h1{
+    color: #0066FF;
+}
+#card-yellow {
+    border: 3px solid #FFC65C;
+    background-color: #fffaf1;
+}
+#card-yellow h1{
+    color: #FFC65C;
+}
+#card-green {
+    border: 3px solid #3B973B;
+    background-color: #f0fff0;
+}
+#card-green h1{
+    color: #3B973B;
+}
+
+
+@media screen and (max-width:768px) {
+    nav button {
+        width: 70%;
+        height: 10%; 
+    }
+    .second-part {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .text-side {
+        width: 90vw;
+    }
+
+    .team-side {
+        margin-top: 80px;
+        padding: 0;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .person-item {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "img name github"
+            "img name linkedin"
+            ;
+            
+    
+    }
+
+    .third-part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+     }
+    .projects {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+       }
+    
+
+    .project-card {
+        
+        max-width:80%;
+    }
+    
 }
