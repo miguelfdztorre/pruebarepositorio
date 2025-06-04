@@ -117,7 +117,7 @@ header h1 {
 
   .banner {
     background: linear-gradient(135deg, #ddfe89 0%, #66a6ff 100%);
-    color: white;
+    color: rgb(179, 177, 177);
     text-align: center;
     padding: 2rem 1rem;
     border-radius: 12px;
@@ -140,7 +140,7 @@ header h1 {
   .banner {
     position: relative;
     background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
-    color: white;
+    color: rgb(97, 96, 96);
     text-align: center;
     padding: 2rem 1rem;
     border-radius: 12px;
