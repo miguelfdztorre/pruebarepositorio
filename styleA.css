@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #f6fff7;
+  display: flex;
+  justify-content: center;
+}
+
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;  
+  width: 100%;
+}
+
+/* NAV */
+#navperfiles {
+  background-color: #ceeadd;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#NombreEmpresa {
+  font-size: 40px;
+}
+
+/* SECCIÓN INFO */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Imagen y nombre en los perfiles*/
+#imagen-nombre {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border: 2px solid #3b973b;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.fotoPerfil {
+  width: 120px;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid #3b973b;
+}
+
+.nombrePerfil {
+  font-size: 24px;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+
+#experiencias {
+  padding: 15px;
+  background-color: white;
+  border: 2px solid #3b973b;
+  border-radius: 15px;
+}
+
+.textoPersona {
+  line-height: 1.6;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#gitHub, #linkedIn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #3b973b;
+  padding: 10px;
+  border-radius: 10px;
+}
+a {
+  text-decoration: none; 
+  color: inherit;    }   
+
+.textoPersona {
+  max-height: 80px; 
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  }
+
+.textoPersona.expandido {
+  max-height: 1000px; 
+}
+#toggleResumen {
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#toggleResumen:hover {
+  background-color: #555;
+}
+
+@media (max-width: 600px) {
+  /* Imagen y nombre en columna */
+  #imagen-nombre {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nombrePerfil {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Ajustar sección de experiencia */
+  #experiencias {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  /* Footer en columna */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #gitHub, #linkedIn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
