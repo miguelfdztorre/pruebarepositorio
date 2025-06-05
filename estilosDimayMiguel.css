@@ -14,6 +14,38 @@ body{
     margin: auto;
 
 }
+
+.home-svg {
+    width: 50px;
+    margin: 10px;
+}
+
+.back-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    background-color: #f3e7ad;
+    border: 3px solid #eedd8a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 16px;
+    transition:
+        transform 0.5s,
+        background-color 0.5s;
+}
+
+.back-home:hover {
+    background-color: #fcd863;
+    border: 3px solid #ffc14e;
+    transform: scale(1.1); }
+
+
 nav{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -26,7 +58,7 @@ nav{
 
 }
 .photo-name{
-    border: solid green 2px;
+    border: 2px solid #3B973B ;
     border-radius: 10px;
     max-width: 50%;
     margin-bottom: 25px;
@@ -38,7 +70,7 @@ nav{
     justify-content: space-around;
 }
 .main-text{
-    border: 2px solid green;
+    border: 2px solid #3B973B;
     border-radius: 10px;
     text-align: justify;
     max-width: 50%;
