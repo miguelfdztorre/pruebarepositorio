@@ -363,5 +363,7 @@ nav button:hover{
         
         max-width:80%;
     }
-    
+    .hidden{
+        display:none;
+    }
 }
